@@ -17,8 +17,8 @@ pipeline {
         stage('Deliver') {
             steps {
                 input {
-                    message: 'Start using the web site? (Click "Proceed" to continue)'
-                    ok: 'OK!'
+                    message 'Start using the web site? (Click "Proceed" to continue)'
+                    ok 'OK!'
                 }
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
